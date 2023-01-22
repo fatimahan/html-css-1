@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/buttons.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0%;
+            font-family: 'Lato', sans-serif;
+        }
+
+        main {
+            margin-top: 50px;
+        }
+
+        #showcase {
+            background: linear-gradient(to bottom, rgba(66, 40, 18, 0.651), rgba(18, 42, 66, 0.123)),
+                url("./images/image-2.jpeg");
+
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding: 50px;
+            height: 700px;
+            width: 100%;
+            padding: 10px;
+            position: relative;
+        }
+
+        .showcace__title {
+            position: absolute;
+            top: 50%;
+            color: #fff;
+            font-size: 45px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main-header {
+            background-color: #fc997c;
+            padding: 8px 16px;
+        }
+
+        .main-header {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            top: 0;
+        }
+
+
+        .main-nav {
+            display: inline-block;
+            width: calc(100% - 99px);
+            text-align: right;
+        }
+
+        .main-nav__items {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .main-nav__items {
+            display: inline-block;
+            margin: 0 10px;
+
+        }
+
+        .main-header__logo {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 21px;
+        }
+
+        .main-nav__item a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .main-nav__item {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .main-nav__item a:hover {
+            color: #2e4c60
+        }
+
+        .main-nav__item:hover::before {
+            color: #2e4c60
+        }
+
+        .main-nav__item:active::before {
+            color: #fff
+        }
+
+        .main-nav__item a:active {
+            color: #fff
+        }
+
+        .main-nav__item::before {
+            content: '\2022';
+            color: #fff;
+        }
+
+        .main-nav__item--login::before {
+            content: none;
+            color: #fff;
+        }
+
+        #how-it-works {
+
+            padding: 10px;
+            text-align: center;
+        }
+
+
+
+        .row {
+            margin-bottom: 20px;
+        }
+
+        .col-3 {
+            display: inline-block;
+            width: 30%;
+            padding: 16px;
+            margin: 8px;
+        }
+
+        .col-2 {
+            display: inline-block;
+            width: calc(50% - 2px);
+            height: 350px;
+            background-color: #fc997c;
+            vertical-align: top;
+        }
+
+        .icon-box h3 {
+            color: #2C74B3;
+            font-size: 26px;
+        }
+
+        .icon-box i {
+            color: #fc997c;
+        }
+
+        .features__left {
+            background-image: url("./images/image-4.webp");
+            background-size: cover;
+            background-position: top center;
+        }
+
+        .features__right {
+            background-color: #edf5f7;
+            padding: 40px;
+            vertical-align: top;
+        }
+
+        .features__right h3 {
+            font-size: 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2E4C6D;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+
+        .plan {
+
+            text-align: center;
+            padding: 5px;
+
+            width: 33.3%;
+            float: left;
+        }
+
+        .plan__badge {
+            background: #fff;
+            color: #fc997c;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        .recommended_plan {
+            color: #fff;
+            background-color: #2E4C6D !important;
+        }
+
+        .inner-plan {
+            background-color: #edf5f7;
+            padding: 25px 10px;
+            border-radius: 5px;
+            box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+            transition: box-shadow .6s;
+
+
+        }
+
+        .inner-plan:hover {
+            box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.5);
+
+
+        }
+
+        .plan__features {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .plan--features {
+            position: relative;
+            top: -20px;
+        }
+
+        .plan__features li {
+            margin: 6px 0;
+        }
+
+        .clearfix {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container {
+            margin: 0 auto;
+            width: 1000px;
+        }
+
+        #backtotop {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        #backtotop i {
+            color: #fc997c;
+            font-size: 40px;
+        }
+
+        #backtotop i:hover {
+            color: #fb6537;
+            transition: color .6s;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <header class="main-header">
+        <a href="#" class=" main-header__logo">Movieapp</a>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="#">Filmler</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Diziler</a>
+                </li>
+                <li class="main-nav__item main-nav__item--login">
+                    <a href="btn btn-outline-primary" class="btn btn-secondary">login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="showcase">
+            <h1 class="showcace__title">Welcome to Movieapp</h1>
+        </section>
+
+        <section id="how-it-works">
+            <div class="row">
+                <h2>How it works?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt soluta veniam nulla reprehenderit
+                    repudiandae delectus!</p>
+            </div>
+            <div class="row">
+                <div class=" icon-box col-3 ">
+                    <i class="fas fa-volume-up fa-3x"></i>
+                    <h3>Register</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minima cumque recusandae veritatis
+                        delectus tempore.</p>
+                </div>
+                <div class="icon-box col-3 ">
+                    <i class="fas fa-play fa-3x"></i>
+                    <h3>Choose a Plan</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minima cumque recusandae veritatis
+                        delectus tempore.</p>
+                </div>
+                <div class="icon-box col-3 ">
+                    <i class="fas fa-microphone-alt fa-3x"></i>
+                    <h3>Enjoy Moviies</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minima cumque recusandae veritatis
+                        delectus tempore.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="row">
+                <div class="col-2 features__left">
+                </div>
+                <div class="col-2 features__right">
+                    <h3>Watch all Movies & TV Shows once they get released</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dolorem officiis maiores alias
+                        ex, iste minima dolore architecto inventore, maxime culpa quos dolores id eveniet. Doloribus
+                        dolorum recusandae magnam eum?</p>
+                    <a href="#" class="btn btn-primary"> View Features</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans">
+            <div class="row">
+                <h2 class="section-title">Become a Premium Member</h2>
+                <div class=" container clearfix">
+                    <div class="plan">
+                        <div class="inner-plan">
+                            <h2>Free</h2>
+                            <h3>0/month</h3>
+                            <ul class="plan__features">
+                                <li>HD available</li>
+                                <li>Unlimited Movies and TV shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Download and watch offline</li>
+                                <li>Screens you can watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-primary">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan">
+                        <div class="inner-plan recommended_plan">
+                            <h2 class="plan__badge">Recommended</h2>
+                            <h2>Basic</h2>
+                            <h3>$9.99/month</h3>
+                            <ul class="plan__features">
+                                <li>HD available</li>
+                                <li>Unlimited Movies and TV shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Download and watch offline</li>
+                                <li>Screens you can watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-primary">Choose Plan</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="plan">
+                        <div class="inner-plan">
+                            <h2>Premium</h2>
+                            <h3>$19.99/month</h3>
+                            > <ul class="plan__features">
+                                <li>HD available</li>
+                                <li>Unlimited Movies and TV shows</li>
+                                <li>Watch on your phone & tablet</li>
+                                <li>Download and watch offline</li>
+                                <li>Screens you can watch</li>
+                                <li>First Month Free</li>
+                            </ul>
+                            <div>
+                                <button class="btn btn-primary">Choose Plan</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <a href="#body" id="backtotop">
+        <i class="fas fa-chevron-circle-up"></i>
+    </a>
+
+</body>
+
+</html>
